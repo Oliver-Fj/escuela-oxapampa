@@ -330,7 +330,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 110%;
   width: 100%;
   display: none;
 }
@@ -347,8 +347,195 @@ section {
 }
 .main-video video {
   width: 70%;
-  height: 60%;
+  height: 80%;
+  border: 0.5rem solid #fff;
   border-radius: 0.5rem;
+}
+
+.teachers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 1.5rem;
+}
+.teachers .box {
+  text-align: center;
+  overflow: hidden;
+}
+.teachers .box:hover .image .share {
+  transform: translateY(0);
+}
+.teachers .box:hover .image .share a {
+  transform: translateY(-1rem);
+  opacity: 1;
+  transition: transform 0.2s 0.2s;
+}
+.teachers .box .image {
+  overflow: hidden;
+  height: 32rem;
+  width: 100%;
+  position: relative;
+  border-radius: 1.5rem;
+}
+.teachers .box .image .share {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 10;
+  overflow: hidden;
+  transform: translateY(-100%);
+}
+.teachers .box .image .share a {
+  font-size: 2.5rem;
+  margin: 2rem 1.5rem;
+  color: #fff;
+  transform: translateY(5rem);
+  opacity: 0.5;
+}
+.teachers .box .image .share a:hover {
+  color: #fa1d86;
+}
+.teachers .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.teachers .box .content {
+  padding-top: 1rem;
+}
+.teachers .box .content h3 {
+  font-size: 2rem;
+  color: #302851;
+}
+.teachers .box .content span {
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 1.5rem;
+}
+.blog .box .image {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.blog .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.blog .box .content {
+  padding: 2rem;
+  background: #f5f5f5;
+  border-top: 0.3rem groove #666;
+}
+.blog .box .content .icons {
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog .box .content .icons a {
+  font-size: 1.4rem;
+  color: #666;
+}
+.blog .box .content .icons a:hover {
+  color: #224bcf;
+}
+.blog .box .content .icons a i {
+  padding-right: 0.5rem;
+  color: #224bcf;
+}
+.blog .box .content h3 {
+  font-size: 1.7rem;
+  padding: 0.5rem 0;
+  color: #302851;
+}
+.blog .box .content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 2.5;
+  color: #666;
+}
+
+.contact .icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  padding: 2.5%;
+}
+.contact .icons-container .icons {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #f5f5f5;
+  margin-bottom: 2rem;
+}
+.contact .icons-container .icons i {
+  height: 6.5rem;
+  width: 6.5rem;
+  line-height: 6.5rem;
+  font-size: 2.5rem;
+  color: #224bcf;
+  background: #e9edfb;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+.contact .icons-container .icons h3 {
+  font-size: 2rem;
+  color: #302851;
+  padding: 0.5rem 0;
+}
+.contact .icons-container .icons p {
+  line-height: 2;
+  font-size: 1.4rem;
+  color: #666;
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.contact .row form {
+  flex: 1 1 42rem;
+  border-radius: 1rem;
+  background: #f5f5f5;
+  padding: 4rem;
+}
+.contact .row form h3 {
+  font-size: 2.5rem;
+  color: #302851;
+  margin-bottom: 1rem;
+}
+.contact .row form .box, .contact .row form textare {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: #666;
+  text-transform: none;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+.contact .row .map {
+  flex: 1 1 42rem;
+  width: 100%;
+  border-radius: 1rem;
 }
 
 .footer {
@@ -427,6 +614,11 @@ section {
   }
   .about .content h3 {
     font-size: 3rem;
+  }
+  .main-video video {
+    width: 95%;
+    height: 40%;
+    border-width: 0.2rem;
   }
 }
 @media (max-width: 450px) {
